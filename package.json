@@ -6,7 +6,8 @@
         "web-shell:dev": "pnpm --filter @halo/web-shell dev",
         "web-shell:build": "pnpm --filter @halo/web-shell build",
         "web-shell:start": "pnpm --filter @halo/web-shell start",
-        "dev": "nx run-many --target=dev --all"
+        "dev": "nx run-many --target=dev --all",
+        "build:tailwind-preset": "nx build tailwind-preset"
 
   },
   "private": true,

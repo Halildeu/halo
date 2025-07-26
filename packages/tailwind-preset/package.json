@@ -3,13 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "type": "module",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./src/index.csj",
+  "types": "./src/index.csj",
   "exports": {
     ".": {
-      "types": "./src/index.ts",
-      "import": "./src/index.ts",
-      "default": "./src/index.ts"
+      "types": "./src/index.csj",
+      "import": "./src/index.csj",
+      "default": "./src/index.csj"
     },
     "./package.json": "./package.json"
   },
