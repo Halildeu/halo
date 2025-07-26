@@ -1,22 +1,28 @@
 const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
 const { join } = require('path');
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  presets: [require('./packages/tailwind-preset/src/index.cjs')],
+  // Paylaşılan tema ayarlarını (renkler, fontlar vb.)
+  // en doğru yöntem olan takma ad (alias) ile buradan alıyoruz.
+  presets: [require('@halo/tailwind-preset')],
+
+  // Tailwind'e, projenin tamamındaki (hem uygulamalar hem de kütüphaneler)
+  // ilgili dosyaları taramasını söylüyoruz. Bu en kapsayıcı ve doğru yöntemdir.
   content: [
-    join(__dirname, 'apps/**/*.{js,ts,jsx,tsx,html}'),
-    join(__dirname, 'packages/**/*.{js,ts,jsx,tsx,html}'),
+    join(
+      __dirname,
+      '{apps,libs}/**/!(*.stories|*.spec).{ts,tsx,html,cjs,mjs,js}'
+    ),
     ...createGlobPatternsForDependencies(__dirname),
   ],
+
+  // Ana yapılandırmadaki tema bölümü, genellikle paylaşılan preset'i
+  // genişletmek veya üzerine yazmak için kullanılır.
+  // Şu an için boş bırakmak en temiz başlangıçtır.
   theme: {
-    extend: {
-      colors: {
-        primary: {
-          DEFAULT: '#06b6d4',
-          dark: '#0e7490',
-        },
-      },
-    },
+    extend: {},
   },
+
   plugins: [],
 };

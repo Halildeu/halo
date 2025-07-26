@@ -16,6 +16,13 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2022",
-    "customConditions": ["development"]
-  }
+    "customConditions": ["development"],
+
+    "baseUrl": ".",
+    "paths": {
+      "@halo/ui-react": ["libs/ui/react/src/index.ts"],
+      "@halo/tailwind-preset": ["libs/ui/tailwind-preset/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
 }

@@ -1,6 +1,8 @@
 {
   "name": "@halo/ui-react",
   "version": "0.0.1",
+  "private": true,
+  "tags": ["scope:shared", "type:ui"],
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "exports": {

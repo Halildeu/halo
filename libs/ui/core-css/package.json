@@ -1,7 +1,8 @@
 {
-  "name": "@halo/ui-core-css",
+  "name": "@halo/core-css",
   "version": "0.0.1",
   "private": true,
+  "tags": ["scope:shared", "type:ui"],
   "type": "module",
   "main": "./src/index.ts",
   "types": "./src/index.ts",

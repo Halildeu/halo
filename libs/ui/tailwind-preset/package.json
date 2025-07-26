@@ -2,6 +2,7 @@
   "name": "@halo/tailwind-preset",
   "version": "0.0.1",
   "private": true,
+  "tags": ["scope:shared", "type:ui"],
   "type": "module",
   "main": "./src/index.csj",
   "types": "./src/index.csj",
