@@ -1,4 +1,5 @@
-// apps/web-shell/postcss.config.js
+// workspace-wide PostCSS configuration
+
 module.exports = {
   plugins: {
     tailwindcss: {},
