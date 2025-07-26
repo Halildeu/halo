@@ -1,1 +1,1 @@
-export * from './lib/ui-core-css.js';
+export * from './lib/ui-core-css';
