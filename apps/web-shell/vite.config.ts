@@ -18,14 +18,7 @@ export default defineConfig(() => ({
   plugins: [
     react(),
     tsconfigPaths(),
-    // --- TAILWIND CONFIG PATH PATCH ---
-    {
-      name: 'force-tailwind-config-path',
-      configResolved() {
-        // Mutlaka kökten doğru configi okuması için:
-        process.env.TAILWIND_CONFIG = path.resolve(__dirname, '../../tailwind.config.js');
-      },
-    },
+
   ],
   build: {
     outDir: './dist',

@@ -1,15 +1,18 @@
-// tailwind.config.js
+const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
+const { join } = require('path');
+
 module.exports = {
   content: [
-    "./apps/**/*.{js,ts,jsx,tsx,html}",
-    "./packages/**/*.{js,ts,jsx,tsx,html,css}",
+    join(__dirname, 'apps/**/*.{js,ts,jsx,tsx,html}'),
+    join(__dirname, 'packages/**/*.{js,ts,jsx,tsx,html}'),
+    ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#06b6d4", // Açık mavi
-          dark: "#0e7490",    // Koyu mavi
+          DEFAULT: '#06b6d4',
+          dark: '#0e7490',
         },
       },
     },

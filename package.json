@@ -2,7 +2,13 @@
   "name": "@halo/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+        "web-shell:dev": "pnpm --filter @halo/web-shell dev",
+        "web-shell:build": "pnpm --filter @halo/web-shell build",
+        "web-shell:start": "pnpm --filter @halo/web-shell start",
+        "dev": "nx run-many --target=dev --all"
+
+  },
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.28.0",

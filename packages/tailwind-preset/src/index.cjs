@@ -1,5 +1,4 @@
 // packages/tailwind-preset/src/index.cjs
-
 module.exports = {
   theme: {
     extend: {
@@ -13,11 +12,6 @@ module.exports = {
           light: '#fde047',
           DEFAULT: '#facc15',
           dark: '#eab308',
-        },
-        neutral: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          900: '#0f172a',
         },
       },
       fontFamily: {
