@@ -1,12 +1,13 @@
 import { Link, Route, Routes } from 'react-router-dom';
-import NxWelcome from './nx-welcome';
 
 export function App() {
   return (
-    // Ana kapsayıcı: Temamızdaki renkleri ve temel düzeni buraya uyguluyoruz.
+    // Ana kapsayıcı: Temamızdaki renkler ve temel düzeni koruyoruz.
     <div className="bg-secondary text-primary rounded-lg p-6 mt-4 border-2 border-primary-dark">
-      {/* Mevcut "NxWelcome" bileşenini koruyoruz */}
-      <NxWelcome title="@halo/web-ethic" />
+      
+      <h2 className="text-3xl font-bold text-center mb-4">
+        Web-Ethic Micro-Frontend
+      </h2>
 
       <hr className="my-4 border-primary/50" />
 
@@ -27,7 +28,7 @@ export function App() {
           </ul>
         </nav>
 
-        <main className="flex-grow">
+        <main className="flex-grow pt-2">
           <Routes>
             <Route
               path="/"
@@ -53,7 +54,6 @@ export function App() {
           </Routes>
         </main>
       </div>
-      {/* Yönlendirme yapısı sonu */}
     </div>
   );
 }
