@@ -15,6 +15,9 @@ export default defineConfig(() => ({
     port: 4200,
     host: 'localhost',
   },
+      css: {
+    postcss: path.resolve(__dirname, 'postcss.config.cjs'),
+  },
   plugins: [
     react(),
     tsconfigPaths(),

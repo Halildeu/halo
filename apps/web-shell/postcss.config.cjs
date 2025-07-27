@@ -1,9 +1,7 @@
-const path = require('path');
-
 module.exports = {
   plugins: {
-    'postcss-nesting': {}, // Bu satırı ekleyin
-    '@tailwindcss/postcss': {
+    'postcss-nesting': {},
+    tailwindcss: {
       config: path.resolve(__dirname, '../../tailwind.config.js'),
     },
     autoprefixer: {},

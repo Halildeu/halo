@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import path from 'path';
 
 export default defineConfig(() => ({
   root: __dirname,
@@ -13,6 +14,9 @@ export default defineConfig(() => ({
   preview: {
     port: 4201,
     host: 'localhost',
+  },
+    css: {
+    postcss: path.resolve(__dirname, 'postcss.config.cjs'),
   },
   plugins: [react(),
     tsconfigPaths(),
