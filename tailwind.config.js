@@ -3,12 +3,11 @@ const { join } = require('path');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // Paylaşılan tema ayarlarını (renkler, fontlar vb.)
-  // en doğru yöntem olan takma ad (alias) ile buradan alıyoruz.
-  presets: [require('@halo/tailwind-preset')],
+  // Paylaşılan tema ayarlarını preset dosyasından alıyoruz
+  // (repo köküne göre göreli yol).
+  presets: [require('./libs/ui/tailwind-preset/src/index.cjs')],
 
-  // Tailwind'e, projenin tamamındaki (hem uygulamalar hem de kütüphaneler)
-  // ilgili dosyaları taramasını söylüyoruz. Bu en kapsayıcı ve doğru yöntemdir.
+  // Tüm uygulama ve kütüphanelerdeki stilleri taramak için geniş içerik globu
   content: [
     join(
       __dirname,
@@ -17,9 +16,7 @@ module.exports = {
     ...createGlobPatternsForDependencies(__dirname),
   ],
 
-  // Ana yapılandırmadaki tema bölümü, genellikle paylaşılan preset'i
-  // genişletmek veya üzerine yazmak için kullanılır.
-  // Şu an için boş bırakmak en temiz başlangıçtır.
+  // Preset'i genişletmek için kullanabileceğiniz alan
   theme: {
     extend: {},
   },
