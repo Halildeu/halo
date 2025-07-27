@@ -9,12 +9,12 @@
     /* ---------- React & DOM ---------- */
     "jsx": "react-jsx",
     "lib": [
-      "dom",                 // mevcut
-      "dom.iterable",        // 🆕  fetch/Iterator API'leri
-      "es2022"               // 🆕  Promise.withResolvers vb.
+      "dom", // mevcut
+      "dom.iterable", // 🆕  fetch/Iterator API'leri
+      "es2022" // 🆕  Promise.withResolvers vb.
     ],
     "types": [
-      "node",                                     
+      "node",
       "@nx/react/typings/cssmodule.d.ts",
       "@nx/react/typings/image.d.ts",
       "vite/client"
@@ -23,11 +23,11 @@
     /* ---------- Modül sistemi ---------- */
     "rootDir": "src",
     "module": "esnext",
-    "moduleResolution": "bundler",   // Vite önerisi
-    "allowImportingTsExtensions": true,  // 🆕  .tsx uzantı uyarılarını susturur
+    "moduleResolution": "bundler", // Vite önerisi
+    "allowImportingTsExtensions": true, // 🆕  .tsx uzantı uyarılarını susturur
 
     /* ---------- Sıkı kontroller ---------- */
-    "skipLibCheck": true             // base’den miras, ikincil hataları önler
+    "skipLibCheck": true // base’den miras, ikincil hataları önler
   },
 
   /* ---------- Test & build dışı dosyalar ---------- */

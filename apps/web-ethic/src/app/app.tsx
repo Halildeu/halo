@@ -4,7 +4,6 @@ export function App() {
   return (
     // Ana kapsayıcı: Temamızdaki renkler ve temel düzeni koruyoruz.
     <div className="bg-secondary text-primary rounded-lg p-6 mt-4 border-2 border-primary-dark">
-      
       <h2 className="text-3xl font-bold text-center mb-4">
         Web-Ethic Micro-Frontend
       </h2>

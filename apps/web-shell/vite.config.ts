@@ -15,14 +15,10 @@ export default defineConfig(() => ({
     port: 4200,
     host: 'localhost',
   },
-      css: {
+  css: {
     postcss: path.resolve(__dirname, 'postcss.config.cjs'),
   },
-  plugins: [
-    react(),
-    tsconfigPaths(),
-
-  ],
+  plugins: [react(), tsconfigPaths()],
   build: {
     outDir: './dist',
     emptyOutDir: true,

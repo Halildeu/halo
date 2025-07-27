@@ -15,12 +15,10 @@ export default defineConfig(() => ({
     port: 4201,
     host: 'localhost',
   },
-    css: {
+  css: {
     postcss: path.resolve(__dirname, 'postcss.config.cjs'),
   },
-  plugins: [react(),
-    tsconfigPaths(),
-  ],
+  plugins: [react(), tsconfigPaths()],
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [ nxViteTsPaths() ],

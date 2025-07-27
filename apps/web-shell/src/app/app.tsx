@@ -9,8 +9,12 @@ export function App() {
       </div>
       {/* NAVIGATION */}
       <nav className="flex justify-center gap-8 mb-8">
-        <Link className="underline text-primary-dark" to="/">Home</Link>
-        <Link className="underline text-primary-dark" to="/page-2">Page 2</Link>
+        <Link className="underline text-primary-dark" to="/">
+          Home
+        </Link>
+        <Link className="underline text-primary-dark" to="/page-2">
+          Page 2
+        </Link>
       </nav>
       <Routes>
         <Route
