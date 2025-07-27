@@ -1,7 +1,10 @@
-// apps/web-shell/postcss.config.cjs
+const path = require('path');
+
 module.exports = {
   plugins: {
-    '@tailwindcss/postcss': {},   // Tailwind v4 PostCSS eklentisi
+    '@tailwindcss/postcss': {
+      config: path.resolve(__dirname, '../../tailwind.config.js'),
+    },
     autoprefixer: {},
   },
 };

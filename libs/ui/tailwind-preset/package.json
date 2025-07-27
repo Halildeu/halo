@@ -4,13 +4,13 @@
   "private": true,
   "tags": ["scope:shared", "type:ui"],
   "type": "module",
-  "main": "./src/index.csj",
-  "types": "./src/index.csj",
+  "main": "./src/index.cjs",
+  "types": "./src/index.cjs",
   "exports": {
     ".": {
-      "types": "./src/index.csj",
-      "import": "./src/index.csj",
-      "default": "./src/index.csj"
+      "types": "./src/index.cjs",
+      "import": "./src/index.cjs",
+      "default": "./src/index.cjs"
     },
     "./package.json": "./package.json"
   },

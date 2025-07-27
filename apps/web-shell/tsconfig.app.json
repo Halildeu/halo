@@ -1,38 +1,48 @@
 {
   "extends": "../../tsconfig.base.json",
+
   "compilerOptions": {
+    /* ---------- Çıktı klasörü ---------- */
     "outDir": "dist",
     "tsBuildInfoFile": "dist/tsconfig.app.tsbuildinfo",
+
+    /* ---------- React & DOM ---------- */
     "jsx": "react-jsx",
-    "lib": ["dom"],
+    "lib": [
+      "dom",                 // mevcut
+      "dom.iterable",        // 🆕  fetch/Iterator API'leri
+      "es2022"               // 🆕  Promise.withResolvers vb.
+    ],
     "types": [
-      "node",
+      "node",                                     
       "@nx/react/typings/cssmodule.d.ts",
       "@nx/react/typings/image.d.ts",
       "vite/client"
     ],
+
+    /* ---------- Modül sistemi ---------- */
     "rootDir": "src",
     "module": "esnext",
-    "moduleResolution": "bundler"
+    "moduleResolution": "bundler",   // Vite önerisi
+    "allowImportingTsExtensions": true,  // 🆕  .tsx uzantı uyarılarını susturur
+
+    /* ---------- Sıkı kontroller ---------- */
+    "skipLibCheck": true             // base’den miras, ikincil hataları önler
   },
+
+  /* ---------- Test & build dışı dosyalar ---------- */
   "exclude": [
     "out-tsc",
     "dist",
-    "src/**/*.spec.ts",
-    "src/**/*.test.ts",
-    "src/**/*.spec.tsx",
-    "src/**/*.test.tsx",
-    "src/**/*.spec.js",
-    "src/**/*.test.js",
-    "src/**/*.spec.jsx",
-    "src/**/*.test.jsx",
-    "vite.config.ts",
-    "vite.config.mts",
-    "vitest.config.ts",
-    "vitest.config.mts",
-    "eslint.config.js",
-    "eslint.config.cjs",
-    "eslint.config.mjs"
+
+    "src/**/*.spec.{ts,tsx,js,jsx}",
+    "src/**/*.test.{ts,tsx,js,jsx}",
+
+    "vite.config.{ts,mts}",
+    "vitest.config.{ts,mts}",
+    "eslint.config.{js,cjs,mjs}"
   ],
-  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"]
+
+  /* ---------- Dahil edilen kaynaklar ---------- */
+  "include": ["src/**/*.{ts,tsx,js,jsx}"]
 }

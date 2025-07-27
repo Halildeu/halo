@@ -21,7 +21,7 @@
     "baseUrl": ".",
     "paths": {
       "@halo/ui-react": ["libs/ui/react/src/index.ts"],
-      "@halo/tailwind-preset": ["libs/ui/tailwind-preset/src/index.ts"]
+      "@halo/tailwind-preset": ["libs/ui/tailwind-preset/src/index.cjs"]
     }
   },
   "exclude": ["node_modules", "tmp"]
